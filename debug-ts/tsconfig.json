@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "CommonJS",
+    "emitDecoratorMetadata": true,
+    "target": "ES2019",
+    "lib": ["ES2019", "DOM"],
+    "sourceMap": true
+  },
+  "include": ["src/**/*"]
+}

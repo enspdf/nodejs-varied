@@ -1,0 +1,22 @@
+{
+  "name": "esaucy-basic-example",
+  "version": "1.0.0",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/app",
+    "watch": "nodemon --watch 'src/**/*.ts' --ignore ['src/**/*.spec.ts','src/**/*.steps.ts'] --exec npm run start"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "esaucy": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.3.2"
+  }
+}

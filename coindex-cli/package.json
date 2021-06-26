@@ -1,0 +1,16 @@
+{
+  "name": "coindex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "./bin/coindex.js",
+  "scripts": {},
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "colors": "^1.4.0",
+    "commander": "^7.2.0",
+    "configstore": "^5.0.1",
+    "inquirer": "^8.1.1"
+  },
+  "type": "commonjs"
+}

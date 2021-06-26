@@ -1,0 +1,14 @@
+{
+  "name": "imagehub-enspdf",
+  "version": "1.0.4",
+  "main": "src/index.js",
+  "license": "MIT",
+  "bin": {
+    "imagehub": "./src/index.js"
+  },
+  "dependencies": {
+    "commander": "^7.2.0",
+    "ora": "^5.4.1",
+    "sharp": "^0.28.3"
+  }
+}

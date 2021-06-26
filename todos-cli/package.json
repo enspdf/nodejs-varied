@@ -1,0 +1,14 @@
+{
+  "name": "todos-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "todos": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "conf": "^10.0.1"
+  }
+}
