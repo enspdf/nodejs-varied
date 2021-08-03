@@ -1,4 +1,3 @@
-import { ValueObject } from '../../../shared/value-object';
 import { Result } from '../../../shared/result';
 import { Entity, UniqueEntityID } from '../../../shared';
 
