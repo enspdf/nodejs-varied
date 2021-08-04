@@ -9,12 +9,32 @@ export interface UserAggregateProps {
   password: PasswordValueObject;
   budgetBoxIds?: string[];
   totalBalanceAvailable: number;
-  terms: TermValueObject;
+  terms: TermValueObject[];
 }
 
 export class UserAggregate extends AggregateRoot<UserAggregateProps> {
   private constructor(props: UserAggregateProps, id?: UniqueEntityID) {
     super(props, id);
+  }
+
+  get email(): EmailValueObject {
+    return this.props.email;
+  }
+
+  get password(): PasswordValueObject {
+    return this.props.password;
+  }
+
+  get budgetBoxIds(): string[] {
+    return this.props.budgetBoxIds ?? [];
+  }
+
+  get totalBalanceAvailable(): number {
+    return this.props.totalBalanceAvailable;
+  }
+
+  get terms(): TermValueObject[] {
+    return this.props.terms;
   }
 
   public static create(
