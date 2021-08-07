@@ -13,6 +13,10 @@ export class PercentageValueObject extends ValueObject<PercentageValueObjectProp
     return this.props.value;
   }
 
+  setDefaulValueForBenefits(): void {
+    this.props.value = 100;
+  }
+
   public static create(value: number): Result<PercentageValueObject> {
     const isValidRange = value >= 0 && value <= 100;
 
