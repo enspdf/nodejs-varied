@@ -1,3 +1,4 @@
+import { BudgetIdValueObject } from '../../../budget-box/value-objects';
 import { UniqueEntityID } from '../../../shared/unique-entity-id';
 import {
   EmailValueObject,
@@ -14,7 +15,14 @@ describe('user.aggregate', () => {
       email: EmailValueObject.create('valid_mail@domain.com').getResult(),
       password: PasswordValueObject.create('valid_password').getResult(),
       totalBalanceAvailable: 0,
-      budgetBoxIds: ['valid_id_1', 'valid_id_2'],
+      budgetBoxIds: [
+        BudgetIdValueObject.create(
+          new UniqueEntityID('valid_id_1'),
+        ).getResult(),
+        BudgetIdValueObject.create(
+          new UniqueEntityID('valid_id_2'),
+        ).getResult(),
+      ],
       terms: [
         TermValueObject.create({
           acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
@@ -37,7 +45,14 @@ describe('user.aggregate', () => {
       email: EmailValueObject.create('valid_mail@domain.com').getResult(),
       password: PasswordValueObject.create('valid_password').getResult(),
       totalBalanceAvailable: 0,
-      budgetBoxIds: ['valid_id_1', 'valid_id_2'],
+      budgetBoxIds: [
+        BudgetIdValueObject.create(
+          new UniqueEntityID('valid_id_1'),
+        ).getResult(),
+        BudgetIdValueObject.create(
+          new UniqueEntityID('valid_id_2'),
+        ).getResult(),
+      ],
       terms: [
         TermValueObject.create({
           acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
@@ -68,7 +83,12 @@ describe('user.aggregate', () => {
       type: 'browser',
       version: '80.0.1',
     });
-    expect(userResult.budgetBoxIds).toEqual(['valid_id_1', 'valid_id_2']);
+
+    const validIds = userResult.budgetBoxIds.map((idValudObject) =>
+      idValudObject.id.toValue(),
+    );
+
+    expect(validIds).toEqual(['valid_id_1', 'valid_id_2']);
   });
 
   it('should return an empty array if not provode budgetBoxIds', () => {
@@ -99,7 +119,14 @@ describe('user.aggregate', () => {
         email: EmailValueObject.create('valid_mail@domain.com').getResult(),
         password: PasswordValueObject.create('valid_password').getResult(),
         totalBalanceAvailable: 0,
-        budgetBoxIds: ['valid_id_1', 'valid_id_2'],
+        budgetBoxIds: [
+          BudgetIdValueObject.create(
+            new UniqueEntityID('valid_id_1'),
+          ).getResult(),
+          BudgetIdValueObject.create(
+            new UniqueEntityID('valid_id_2'),
+          ).getResult(),
+        ],
         terms: [
           TermValueObject.create({
             acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
