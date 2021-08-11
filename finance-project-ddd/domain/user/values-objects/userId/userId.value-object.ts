@@ -1,4 +1,4 @@
-import { Result } from '../../../shared/result';
+import { Result } from '../../../shared/core/result';
 import { Entity, UniqueEntityID } from '../../../shared';
 
 export class UserIdValueObject extends Entity<any> {

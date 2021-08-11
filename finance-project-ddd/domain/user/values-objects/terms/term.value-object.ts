@@ -1,7 +1,7 @@
-import { ValueObject } from '../../../shared/value-object';
-import { Result } from '../../../shared/result';
+import { ValueObject } from '../../../shared/core/value-object';
+import { Result } from '../../../shared/core/result';
 import { IpValueObject } from '../ip/ip.value-object';
-import { AcceptedAtValueObject } from '../accepted-at/accepted-at.value-object';
+import { DateValueObject } from '../../../shared/common/date/date.value-object';
 
 export enum IOs {
   LINUX = 'LINUX',
@@ -23,7 +23,7 @@ export interface IUserAgent {
 
 export interface TermValueObjectProps {
   ip: IpValueObject;
-  acceptedAt: AcceptedAtValueObject;
+  acceptedAt: DateValueObject;
   userAgent: IUserAgent;
 }
 

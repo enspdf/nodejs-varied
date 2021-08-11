@@ -1,4 +1,4 @@
-import { Result } from '../../../shared/result';
+import { Result } from '../../../shared/core/result';
 import { AggregateRoot, UniqueEntityID } from '../../../shared';
 import { EmailValueObject } from '../../values-objects/email/email.value-object';
 import { PasswordValueObject } from '../../values-objects/password/password.value-object';

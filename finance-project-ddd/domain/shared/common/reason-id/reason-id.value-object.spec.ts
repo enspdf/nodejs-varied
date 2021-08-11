@@ -1,4 +1,4 @@
-import { UniqueEntityID } from '../../../shared';
+import { UniqueEntityID } from '../..';
 import { ReasonIdValueObject } from './reason-id.value-object';
 
 describe('reason-id.value-object', () => {

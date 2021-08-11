@@ -1,5 +1,5 @@
-import { ValueObject } from '../../../shared/value-object';
-import { Result } from '../../../shared/result';
+import { ValueObject } from '../../../shared/core/value-object';
+import { Result } from '../../../shared/core/result';
 
 const validateIpRegex =
   /\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b/;

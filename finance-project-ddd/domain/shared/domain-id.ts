@@ -1,5 +1,5 @@
-import Entity from './entity';
-import UniqueEntityID from './unique-entity-id';
+import Entity from './core/entity';
+import UniqueEntityID from './core/unique-entity-id';
 
 export default class DomainId extends Entity<any> {
   private constructor(id?: UniqueEntityID) {

@@ -1,10 +1,10 @@
 import { BudgetIdValueObject } from '../../../budget-box/value-objects';
-import { UniqueEntityID } from '../../../shared/unique-entity-id';
+import { UniqueEntityID } from '../../../shared/core/unique-entity-id';
 import {
   EmailValueObject,
   PasswordValueObject,
   TermValueObject,
-  AcceptedAtValueObject,
+  DateValueObject,
   IpValueObject,
 } from '../../values-objects';
 import { UserAggregate } from './user.aggregate';
@@ -25,7 +25,7 @@ describe('user.aggregate', () => {
       ],
       terms: [
         TermValueObject.create({
-          acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
+          acceptedAt: DateValueObject.create(new Date()).getResult(),
           ip: IpValueObject.create('45.192.110.42').getResult(),
           userAgent: {
             name: 'firefox',
@@ -55,7 +55,7 @@ describe('user.aggregate', () => {
       ],
       terms: [
         TermValueObject.create({
-          acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
+          acceptedAt: DateValueObject.create(new Date()).getResult(),
           ip: IpValueObject.create('45.192.110.42').getResult(),
           userAgent: {
             name: 'firefox',
@@ -98,7 +98,7 @@ describe('user.aggregate', () => {
       totalBalanceAvailable: 0,
       terms: [
         TermValueObject.create({
-          acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
+          acceptedAt: DateValueObject.create(new Date()).getResult(),
           ip: IpValueObject.create('45.192.110.42').getResult(),
           userAgent: {
             name: 'firefox',
@@ -129,7 +129,7 @@ describe('user.aggregate', () => {
         ],
         terms: [
           TermValueObject.create({
-            acceptedAt: AcceptedAtValueObject.create(new Date()).getResult(),
+            acceptedAt: DateValueObject.create(new Date()).getResult(),
             ip: IpValueObject.create('45.192.110.42').getResult(),
             userAgent: {
               name: 'firefox',

@@ -1,5 +1,5 @@
-import { ValueObject } from '../../../shared/value-object';
-import { Result } from '../../../shared/result';
+import { ValueObject } from '../../../shared/core/value-object';
+import { Result } from '../../../shared/core/result';
 
 import isEmail from 'validator/lib/isEmail';
 

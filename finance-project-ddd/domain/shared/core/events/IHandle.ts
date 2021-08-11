@@ -1,6 +1,6 @@
 // @ts-ignore
 /* eslint-disable  */
-import IDomainEvent from './domain-event.interface';
+import IDomainEvent from './IDomainEvent';
 
 export default interface IHandle<IDomainEvent> {
   setupSubscriptions(): void;
